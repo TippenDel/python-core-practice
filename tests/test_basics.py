@@ -1,5 +1,3 @@
-import pytest
-
 from src.basics import get_type_names, format_price, clean_text
 
 
@@ -49,7 +47,3 @@ def test_clean_text_whitespace() -> None:
 
 def test_clean_text_mixed_case() -> None:
     assert clean_text("  PyThOn  ") == "python"
-
-    def test_clean_text_wrong_type() -> None:
-        with pytest.raises(TypeError):
-            clean_text(123)
